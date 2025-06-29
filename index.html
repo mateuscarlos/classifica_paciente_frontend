@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Pacientes - Home Care</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-heartbeat"></i>
+                <h1>Sistema de Classificação de Pacientes</h1>
+                <p>Home Care - Avaliação de Risco</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="form-container">
+                    <h2>
+                        <i class="fas fa-user-md"></i>
+                        Dados do Paciente
+                    </h2>
+                    
+                    <form id="patientForm">
+                        <div class="form-group">
+                            <label for="age_group">
+                                <i class="fas fa-birthday-cake"></i>
+                                Faixa Etária
+                            </label>
+                            <select id="age_group" name="age_group" required>
+                                <option value="">Selecione a faixa etária</option>
+                                <option value="0-18">0-18 anos</option>
+                                <option value="19-35">19-35 anos</option>
+                                <option value="36-60">36-60 anos</option>
+                                <option value="61+">61+ anos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">
+                                <i class="fas fa-venus-mars"></i>
+                                Gênero
+                            </label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Selecione o gênero</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-search"></i>
+                            Classificar Paciente
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-container">
+                    <h2>
+                        <i class="fas fa-chart-line"></i>
+                        Resultado da Classificação
+                    </h2>
+                    
+                    <div class="result-card">
+                        <div class="patient-info">
+                            <h3>Dados do Paciente</h3>
+                            <p><strong>Faixa Etária:</strong> <span id="resultAge"></span></p>
+                            <p><strong>Gênero:</strong> <span id="resultGender"></span></p>
+                        </div>
+                        
+                        <div class="risk-result">
+                            <div class="risk-class" id="riskClass">
+                                <span class="risk-letter" id="riskLetter">-</span>
+                            </div>
+                            <div class="risk-details">
+                                <h4>Classificação de Risco</h4>
+                                <p class="risk-interpretation" id="riskInterpretation">-</p>
+                                <p class="confidence">
+                                    <strong>Confiança:</strong> 
+                                    <span id="confidence">-</span>%
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="new-classification-btn" onclick="resetForm()">
+                        <i class="fas fa-plus"></i>
+                        Nova Classificação
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p>Analisando dados do paciente...</p>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-container">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Erro na Classificação</h3>
+                    <p id="errorMessage">Ocorreu um erro inesperado.</p>
+                    <button type="button" class="retry-btn" onclick="resetForm()">
+                        <i class="fas fa-redo"></i>
+                        Tentar Novamente
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Sistema de Classificação de Pacientes - Home Care</p>
+            <p>Desenvolvido com tecnologias de Machine Learning</p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

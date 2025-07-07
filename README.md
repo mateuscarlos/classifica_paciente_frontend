@@ -37,7 +37,7 @@ classifica_paciente_frontend/
 ### Pré-requisitos
 
 - Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Backend da API rodando (veja [https://github.com/mateuscarlos/classifica_paciente_backend])
+- Backend da API rodando (veja https://github.com/mateuscarlos/classifica_paciente_backend)
 
 ### Configuração da API
 
@@ -193,7 +193,7 @@ Envia dados para classificação
 ## 🤝 Integração com Backend
 
 Este frontend foi desenvolvido para trabalhar com o backend disponível em:
-- Repositório: `[classifica_paciente_backend](https://github.com/mateuscarlos/classifica_paciente_backend)`
+- Repositório: `https://github.com/mateuscarlos/classifica_paciente_backend`
 - URL padrão: `http://localhost:5000`
 
 Certifique-se de que o backend esteja rodando antes de usar o frontend.

@@ -37,7 +37,7 @@ classifica_paciente_frontend/
 ### Pré-requisitos
 
 - Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Backend da API rodando (veja [classifica_paciente_backend](../classifica_paciente_backend/))
+- Backend da API rodando (veja [https://github.com/mateuscarlos/classifica_paciente_backend])
 
 ### Configuração da API
 
@@ -48,25 +48,6 @@ classifica_paciente_frontend/
 ```javascript
 // Para ambiente local
 const API_BASE_URL = 'http://localhost:5000';
-
-// Para ambiente de produção
-const API_BASE_URL = 'https://sua-api.herokuapp.com';
-```
-
-### URLs de Exemplo para Deploy
-
-```javascript
-// Heroku
-const API_BASE_URL = 'https://sua-api.herokuapp.com';
-
-// Railway
-const API_BASE_URL = 'https://sua-api.railway.app';
-
-// Render
-const API_BASE_URL = 'https://sua-api.render.com';
-
-// Vercel
-const API_BASE_URL = 'https://sua-api.vercel.app';
 ```
 
 ## 🚀 Como Usar
@@ -209,34 +190,10 @@ Envia dados para classificação
 }
 ```
 
-## 📦 Deploy
-
-### Hospedagem Estática
-O frontend pode ser hospedado em qualquer serviço de hospedagem estática:
-
-- **Netlify**: Arrastar e soltar a pasta
-- **Vercel**: Conectar com GitHub
-- **GitHub Pages**: Usar repositório GitHub
-- **Firebase Hosting**: Deploy via CLI
-
-### Exemplo de Deploy no Netlify
-
-1. Faça zip da pasta do frontend
-2. Vá para [netlify.com](https://netlify.com)
-3. Arraste o zip para a área de deploy
-4. Configure a URL da API para o backend em produção
-
-### Exemplo de Deploy no Vercel
-
-1. Instale a CLI do Vercel: `npm i -g vercel`
-2. Na pasta do frontend, execute: `vercel`
-3. Siga as instruções
-4. Configure a URL da API para o backend
-
 ## 🤝 Integração com Backend
 
 Este frontend foi desenvolvido para trabalhar com o backend disponível em:
-- Repositório: `classifica_paciente_backend`
+- Repositório: `[classifica_paciente_backend](https://github.com/mateuscarlos/classifica_paciente_backend)`
 - URL padrão: `http://localhost:5000`
 
 Certifique-se de que o backend esteja rodando antes de usar o frontend.
